@@ -43,20 +43,26 @@ export default function Contact() {
               <p className="font-space text-sm leading-relaxed opacity-80 mb-6">
                 Available for freelance opportunities and creative collaborations. Let&apos;s build something bold and unforgettable.
               </p>
-              <a href="mailto:hello@studio.com" className="font-bebas text-3xl md:text-4xl text-hot-pink hover:text-mustard transition-colors break-all">
-                hello@studio.com
+              <a href="mailto:krishnaedits48@gmail.com" className="font-bebas text-3xl md:text-4xl text-hot-pink hover:text-mustard transition-colors break-all">
+                krishnaedits48@gmail.com
               </a>
             </div>
 
             <div className="flex flex-wrap gap-4">
-              {['Instagram', 'Behance', 'Dribbble', 'LinkedIn'].map((social, i) => (
+              {[
+                { label: 'Instagram', href: 'https://www.instagram.com/minding.my.own.canvas' },
+                { label: 'LinkedIn', href: 'https://www.linkedin.com/in/krishnaveni-m-79b295368' },
+                { label: 'Gmail', href: 'mailto:krishnaedits48@gmail.com' },
+              ].map((social) => (
                 <motion.a
-                  key={social}
-                  href={`#${social}`}
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ rotate: -3, scale: 1.05 }}
                   className="px-6 py-3 bg-ink text-paper font-bebas text-xl tracking-widest brutalist-border brutalist-shadow hover:bg-hot-pink transition-colors duration-200"
                 >
-                  {social}
+                  {social.label}
                 </motion.a>
               ))}
             </div>
@@ -108,7 +114,7 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="mt-24 pt-8 border-t-3 border-ink flex flex-col md:flex-row justify-between items-center gap-4 text-ink/40 text-sm font-space">
-          <p>© {new Date().getFullYear()} Creative Studio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Krishnaveni. All rights reserved.</p>
           <p className="font-caveat text-xl text-ink/30 rotate-1">made with ❤️ + lots of coffee</p>
         </div>
       </div>

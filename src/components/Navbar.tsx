@@ -44,7 +44,7 @@ export default function Navbar() {
             )}
           >
             <Link href="/" className="text-4xl font-bebas text-ink tracking-wider relative z-50">
-              STUDIO<span className="text-hot-pink">!</span>
+              KRISHNA<span className="text-hot-pink">!</span>
             </Link>
 
             <div className="hidden lg:flex items-center gap-8">
