@@ -3,16 +3,16 @@
 import { motion } from "framer-motion";
 
 const photos = [
-  { id: 1, url: "/portfolio/photography/1.jpeg", title: "Painted by Light", rotate: "-rotate-3" },
-  { id: 2, url: "/portfolio/photography/2.jpeg", title: "Soul in Focus", rotate: "rotate-2" },
-  { id: 3, url: "/portfolio/photography/3.jpeg", title: "Urban Stories", rotate: "-rotate-1" },
-  { id: 4, url: "/portfolio/photography/4.jpeg", title: "Liquid Horizons", rotate: "rotate-3" },
-  { id: 5, url: "/portfolio/photography/5.jpeg", title: "Crafted Details", rotate: "-rotate-2" },
-  { id: 6, url: "/portfolio/photography/6.jpeg", title: "Midnight Pulse", rotate: "rotate-1" },
-  { id: 7, url: "/portfolio/photography/7.jpeg", title: "Silent Compositions", rotate: "-rotate-4" },
-  { id: 8, url: "/portfolio/photography/8.jpeg", title: "Monochrome Stories", rotate: "rotate-2" },
-  { id: 9, url: "/portfolio/photography/9.jpeg", title: "Frozen Energy", rotate: "-rotate-1" },
-  { id: 10, url: "/portfolio/photography/10.jpeg", title: "Winds & Waves", rotate: "rotate-3" },
+  { id: 1, url: "/portfolio/photography/1.jpeg", title: "Electric Dreams", rotate: "-rotate-3" },
+  { id: 2, url: "/portfolio/photography/2.jpeg", title: "Golden Shadow", rotate: "rotate-2" },
+  { id: 3, url: "/portfolio/photography/3.jpeg", title: "Quiet Dignity", rotate: "-rotate-1" },
+  { id: 4, url: "/portfolio/photography/4.jpeg", title: "Against the Current", rotate: "rotate-3" },
+  { id: 5, url: "/portfolio/photography/5.jpeg", title: "Time Stood Still", rotate: "-rotate-2" },
+  { id: 6, url: "/portfolio/photography/6.jpeg", title: "Carnival of Lights", rotate: "rotate-1" },
+  { id: 7, url: "/portfolio/photography/7.jpeg", title: "Sacred Gold", rotate: "-rotate-4" },
+  { id: 8, url: "/portfolio/photography/8.jpeg", title: "Bloom", rotate: "rotate-2" },
+  { id: 9, url: "/portfolio/photography/9.jpeg", title: "Colors of Life", rotate: "-rotate-1" },
+  { id: 10, url: "/portfolio/photography/10.jpeg", title: "Into the Wind", rotate: "rotate-3" },
 ];
 
 export default function Photography() {
