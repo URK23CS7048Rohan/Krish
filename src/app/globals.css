@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-paper: #f0eee4; /* Warm textured off-white */
+  --color-ink: #111111;
+  --color-hot-pink: #ff2a6d;
+  --color-deep-green: #0a4226;
+  --color-mustard: #ffb800;
+  --color-lavender: #d8b4e2;
+  --color-blood-orange: #ff4500;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-hot-pink: var(--color-hot-pink);
+  --color-deep-green: var(--color-deep-green);
+  --color-mustard: var(--color-mustard);
+  --color-lavender: var(--color-lavender);
+  --color-blood-orange: var(--color-blood-orange);
+  
+  --font-bebas: var(--font-bebas), "Impact", sans-serif;
+  --font-caveat: var(--font-caveat), "Comic Sans MS", cursive;
+  --font-space: var(--font-space), "Courier New", monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-space);
+  /* Subtle paper texture using SVG data URI */
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  overflow-x: hidden;
+}
+
+/* Custom Scrapbook Utilities */
+.brutalist-border {
+  border: 3px solid var(--color-ink);
+}
+
+.brutalist-shadow {
+  box-shadow: 6px 6px 0px 0px var(--color-ink);
+  transition: all 0.2s ease;
+}
+
+.brutalist-shadow:hover {
+  box-shadow: 2px 2px 0px 0px var(--color-ink);
+  transform: translate(4px, 4px);
+}
+
+.polaroid {
+  background: white;
+  padding: 12px 12px 40px 12px;
+  border: 1px solid #ccc;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+  transform: rotate(calc(-3deg + 6deg * var(--rand, 0.5)));
+}
+
+.sticker {
+  background-color: var(--color-hot-pink);
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-bebas);
+  border: 2px solid var(--color-ink);
+}
+
+.highlight-marker {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.highlight-marker::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  left: -2%;
+  width: 104%;
+  height: 40%;
+  background-color: var(--color-mustard);
+  z-index: -1;
+  transform: rotate(-1deg);
+}
+
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-ink);
+}
+
+/* Scrollbar styling for aesthetic */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-paper);
+  border-left: 2px solid var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-hot-pink);
+  border: 2px solid var(--color-ink);
 }
