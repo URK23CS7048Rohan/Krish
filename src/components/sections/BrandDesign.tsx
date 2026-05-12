@@ -52,9 +52,6 @@ export default function BrandDesign() {
             className="col-span-6 md:col-span-4 row-span-2 relative group brutalist-border brutalist-shadow overflow-hidden"
           >
             <img src={brandImages[0].url} alt={brandImages[0].title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 bg-ink/90 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-              <span className="font-bebas text-3xl text-paper">{brandImages[0].title}</span>
-            </div>
           </motion.div>
 
           {/* Small side cards */}
@@ -68,9 +65,6 @@ export default function BrandDesign() {
               className={`col-span-3 md:col-span-2 relative group brutalist-border brutalist-shadow overflow-hidden ${i === 0 ? "-rotate-1" : "rotate-1"}`}
             >
               <img src={item.url} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 bg-ink/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="font-bebas text-2xl text-paper">{item.title}</span>
-              </div>
             </motion.div>
           ))}
 
@@ -85,9 +79,6 @@ export default function BrandDesign() {
               className={`col-span-3 relative group brutalist-border brutalist-shadow overflow-hidden ${i === 0 ? "rotate-1" : "-rotate-1"}`}
             >
               <img src={item.url} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute bottom-0 left-0 right-0 bg-ink/90 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="font-bebas text-2xl text-paper">{item.title}</span>
-              </div>
             </motion.div>
           ))}
         </div>
