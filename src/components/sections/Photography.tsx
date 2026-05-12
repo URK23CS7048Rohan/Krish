@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 const photos = [
   { id: 1, url: "/portfolio/photography/1.jpeg", title: "Luminous Trails", rotate: "-rotate-3" },
-  { id: 2, url: "/portfolio/photography/2.jpeg", title: "Soul in Focus", rotate: "rotate-2" },
-  { id: 3, url: "/portfolio/photography/3.jpeg", title: "Life Between Streets", rotate: "-rotate-1" },
-  { id: 4, url: "/portfolio/photography/4.jpeg", title: "Liquid Horizon", rotate: "rotate-3" },
-  { id: 5, url: "/portfolio/photography/5.jpeg", title: "The Art of Products", rotate: "-rotate-2" },
-  { id: 6, url: "/portfolio/photography/6.jpeg", title: "Midnight Pulse", rotate: "rotate-1" },
-  { id: 7, url: "/portfolio/photography/7.jpeg", title: "Silent Composition", rotate: "-rotate-4" },
-  { id: 8, url: "/portfolio/photography/8.jpeg", title: "Monochrome Stories", rotate: "rotate-2" },
-  { id: 9, url: "/portfolio/photography/9.jpeg", title: "Motion Unleashed", rotate: "-rotate-1" },
+  { id: 2, url: "/portfolio/photography/2.jpeg", title: "The Art of Products", rotate: "rotate-2" },
+  { id: 3, url: "/portfolio/photography/3.jpeg", title: "Monochrome Stories", rotate: "-rotate-1" },
+  { id: 4, url: "/portfolio/photography/4.jpeg", title: "Soul in Focus", rotate: "rotate-3" },
+  { id: 5, url: "/portfolio/photography/5.jpeg", title: "Midnight Pulse", rotate: "-rotate-2" },
+  { id: 6, url: "/portfolio/photography/6.jpeg", title: "Motion Unleashed", rotate: "rotate-1" },
+  { id: 7, url: "/portfolio/photography/7.jpeg", title: "Life Between Streets", rotate: "-rotate-4" },
+  { id: 8, url: "/portfolio/photography/8.jpeg", title: "Silent Composition", rotate: "rotate-2" },
+  { id: 9, url: "/portfolio/photography/9.jpeg", title: "Liquid Horizon", rotate: "-rotate-1" },
   { id: 10, url: "/portfolio/photography/10.jpeg", title: "Chasing Horizons", rotate: "rotate-3" },
 ];
 
