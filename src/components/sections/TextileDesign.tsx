@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const textiles = [
-  { id: 1, title: "Woven Currents", material: "Silk & Recycled Plastic", url: "/portfolio/textile-design/1.jpeg" },
+  { id: 1, title: "Woven Currents", material: "Silk", url: "/portfolio/textile-design/1.jpeg" },
   { id: 2, title: "Abyssal Thread", material: "Merino Wool", url: "/portfolio/textile-design/2.jpeg" },
   { id: 3, title: "Coral Reef Jacquard", material: "Organic Cotton", url: "/portfolio/textile-design/3.jpeg" },
   { id: 4, title: "Deep Sea Weave", material: "Linen", url: "/portfolio/textile-design/4.jpeg" },
