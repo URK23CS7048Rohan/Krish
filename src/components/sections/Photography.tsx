@@ -3,16 +3,16 @@
 import { motion } from "framer-motion";
 
 const photos = [
-  { id: 1, url: "/portfolio/photography/1.jpeg", title: "Untitled I", rotate: "-rotate-3", offset: "md:mt-0" },
-  { id: 2, url: "/portfolio/photography/2.jpeg", title: "Untitled II", rotate: "rotate-2", offset: "md:mt-20" },
-  { id: 3, url: "/portfolio/photography/3.jpeg", title: "Untitled III", rotate: "-rotate-1", offset: "md:mt-8" },
-  { id: 4, url: "/portfolio/photography/4.jpeg", title: "Untitled IV", rotate: "rotate-3", offset: "md:mt-32" },
-  { id: 5, url: "/portfolio/photography/5.jpeg", title: "Untitled V", rotate: "-rotate-2", offset: "md:mt-4" },
-  { id: 6, url: "/portfolio/photography/6.jpeg", title: "Untitled VI", rotate: "rotate-1", offset: "md:mt-16" },
-  { id: 7, url: "/portfolio/photography/7.jpeg", title: "Untitled VII", rotate: "-rotate-4", offset: "md:mt-10" },
-  { id: 8, url: "/portfolio/photography/8.jpeg", title: "Untitled VIII", rotate: "rotate-2", offset: "md:mt-24" },
-  { id: 9, url: "/portfolio/photography/9.jpeg", title: "Untitled IX", rotate: "-rotate-1", offset: "md:mt-6" },
-  { id: 10, url: "/portfolio/photography/10.jpeg", title: "Untitled X", rotate: "rotate-3", offset: "md:mt-14" },
+  { id: 1, url: "/portfolio/photography/1.jpeg", title: "Painted by Light", rotate: "-rotate-3" },
+  { id: 2, url: "/portfolio/photography/2.jpeg", title: "Soul in Focus", rotate: "rotate-2" },
+  { id: 3, url: "/portfolio/photography/3.jpeg", title: "Urban Stories", rotate: "-rotate-1" },
+  { id: 4, url: "/portfolio/photography/4.jpeg", title: "Liquid Horizons", rotate: "rotate-3" },
+  { id: 5, url: "/portfolio/photography/5.jpeg", title: "Crafted Details", rotate: "-rotate-2" },
+  { id: 6, url: "/portfolio/photography/6.jpeg", title: "Midnight Pulse", rotate: "rotate-1" },
+  { id: 7, url: "/portfolio/photography/7.jpeg", title: "Silent Compositions", rotate: "-rotate-4" },
+  { id: 8, url: "/portfolio/photography/8.jpeg", title: "Monochrome Stories", rotate: "rotate-2" },
+  { id: 9, url: "/portfolio/photography/9.jpeg", title: "Frozen Energy", rotate: "-rotate-1" },
+  { id: 10, url: "/portfolio/photography/10.jpeg", title: "Winds & Waves", rotate: "rotate-3" },
 ];
 
 export default function Photography() {
