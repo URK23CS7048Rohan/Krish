@@ -92,10 +92,10 @@ export default function GraphicDesign() {
   );
 }
 
-function ProjectCard({ project, yOffset }: { project: any, yOffset: any }) {
+function ProjectCard({ project }: { project: any }) {
   return (
     <motion.div
-      style={{ y: yOffset }}
+      whileHover={{ y: -10 }}
       className="relative group cursor-pointer"
     >
       <div className="relative overflow-hidden bg-paper soft-shadow rounded-sm transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
