@@ -5,10 +5,12 @@ import MagazineDesign from "@/components/sections/MagazineDesign";
 import Photography from "@/components/sections/Photography";
 import TextileDesign from "@/components/sections/TextileDesign";
 import Contact from "@/components/sections/Contact";
+import ScrollSequence from "@/components/sections/ScrollSequence";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <ScrollSequence />
       <Hero />
       <BrandDesign />
       <GraphicDesign />

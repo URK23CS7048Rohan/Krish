@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -15,22 +15,30 @@ const navLinks = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+    
+    setScrolled(latest > 50);
+
+    // Hide navbar when scrolling down past 150px, show when scrolling up
+    if (latest > 150 && latest > previous) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
 
   return (
     <>
       <motion.nav
         initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        animate={{ y: hidden && !menuOpen ? -150 : 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out",
           scrolled ? "py-4" : "py-8"
@@ -40,7 +48,7 @@ export default function Navbar() {
           <div
             className={cn(
               "flex items-center justify-between transition-all duration-300 px-6 py-3",
-              scrolled || menuOpen ? "bg-paper brutalist-border brutalist-shadow" : "bg-transparent"
+              scrolled || menuOpen ? "bg-paper/90 backdrop-blur-md border-b-2 border-ink/10 shadow-sm" : "bg-transparent"
             )}
           >
             <Link href="/" className="text-4xl font-bebas text-ink tracking-wider relative z-50">
@@ -87,8 +95,7 @@ export default function Navbar() {
             initial={{ opacity: 0, clipPath: "circle(0% at 100% 0)" }}
             animate={{ opacity: 1, clipPath: "circle(150% at 100% 0)" }}
             exit={{ opacity: 0, clipPath: "circle(0% at 100% 0)" }}
-            transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-40 bg-mustard flex flex-col items-center justify-center brutalist-border"
+            className="fixed inset-0 z-40 bg-mustard flex flex-col items-center justify-center"
           >
             <div className="absolute top-10 left-10 text-9xl font-caveat text-ink/10 -rotate-12">
               Menu
@@ -106,7 +113,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-5xl md:text-7xl font-bebas text-ink hover:text-white hover:bg-ink px-4 py-2 transition-all brutalist-border brutalist-shadow bg-paper"
+                    className="text-5xl md:text-7xl font-bebas text-ink hover:text-white hover:bg-ink px-4 py-2 transition-all soft-shadow rounded-sm bg-paper"
                   >
                     {link.name}
                   </Link>

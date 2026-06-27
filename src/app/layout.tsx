@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-paper text-ink selection:bg-hot-pink selection:text-white">
         <SmoothScrolling>
           <Navbar />
-          <main className="flex-grow pt-24 overflow-hidden">{children}</main>
+          <main className="flex-grow pt-24">{children}</main>
         </SmoothScrolling>
       </body>
     </html>
