@@ -106,9 +106,8 @@ body {
   width: 100%;
   height: 100%;
   background-image: url('/scrapbook/crumpled_texture.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: 400px;
+  background-repeat: repeat;
   mix-blend-mode: multiply;
   opacity: 0.15;
   pointer-events: none;

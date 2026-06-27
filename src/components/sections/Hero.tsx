@@ -158,7 +158,7 @@ export default function Hero() {
           <motion.div 
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            className="relative w-[80%] aspect-[3/4] polaroid soft-shadow group z-10 bg-white"
+            className="relative w-full md:w-[80%] aspect-square md:aspect-[3/4] polaroid soft-shadow group z-10 bg-white"
             style={{ "--rand": "0.8" } as React.CSSProperties}
           >
             <img src="/scrapbook/masking_tape.png" className="absolute -top-5 left-8 w-24 h-10 object-contain -rotate-3 z-20 opacity-90 mix-blend-multiply" alt="" />
